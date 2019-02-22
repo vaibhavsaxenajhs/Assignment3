@@ -1,0 +1,346 @@
+{
+"swagger": "2.0",
+"info": {
+    "version": "1.0.0",
+    "description": "APIs for Cab Booking",
+    "title": "MyCab"
+},
+"host": "localhost:4500",
+"basePath": "/",
+"schemes": [
+    "http"
+],
+"paths": {
+    "/admin/login": {
+        "get": {
+            "description": "Admin Login",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Email",
+                    "name": "email",
+                    "in": "query",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Password",
+                    "name": "password",
+                    "in": "query",
+                    "example": "12345"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "successfully signed up."
+                }
+            }
+        }
+    },
+    "/user/signUp": {
+        "post": {
+            "description": "Signup for Customer",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Firstname",
+                    "name": "firstName",
+                    "in": "formData",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Lastname",
+                    "name": "lastName",
+                    "in": "formData",
+                    "example": "12345"
+                },
+                {
+                    "type": "string",
+                    "description": "Email of Customer",
+                    "name": "email",
+                    "in": "formData",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Password",
+                    "name": "password",
+                    "in": "formData",
+                    "example": "12345"
+                },
+                {
+                    "type": "string",
+                    "description": "Mobile Number",
+                    "name": "mobileNumber",
+                    "in": "formData",
+                    "example": "example@example.com"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "successfully signed up."
+                }
+            }
+        }
+    },
+    "/user/login": {
+        "get": {
+            "description": "Login for Customer",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Email",
+                    "name": "email",
+                    "in": "query",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Password",
+                    "name": "password",
+                    "in": "query",
+                    "example": "12345"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "successfully Logged In."
+                }
+            }
+        }
+    },
+    "/user/createBooking": {
+        "post": {
+            "description": "Customer will create Booking",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Token",
+                    "name": "token",
+                    "in": "formData",
+                    "example": "#2$64vdfefe#43"
+                },
+                {
+                    "type": "string",
+                    "description": "Pickup Lat",
+                    "name": "pickupLat",
+                    "in": "formData",
+                    "example": "12345.1212"
+                },
+                {
+                    "type": "string",
+                    "description": "Pickup Long",
+                    "name": "pickupLong",
+                    "in": "formData",
+                    "example": "2111212.00221"
+                },
+                {
+                    "type": "string",
+                    "description": "Drop Lat",
+                    "name": "dropLat",
+                    "in": "formData",
+                    "example": "12345.2321"
+                },
+                {
+                    "type": "string",
+                    "description": "Drop Long",
+                    "name": "dropLong",
+                    "in": "formData",
+                    "example": "2112.2232"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Booking successfully Created."
+                }
+            }
+        }
+    },
+    "/driver/signUp": {
+        "post": {
+            "description": "Signup for Driver",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Firstname",
+                    "name": "firstName",
+                    "in": "formData",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Lastname",
+                    "name": "lastName",
+                    "in": "formData",
+                    "example": "12345"
+                },
+                {
+                    "type": "string",
+                    "description": "Email of Customer",
+                    "name": "email",
+                    "in": "formData",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Password",
+                    "name": "password",
+                    "in": "formData",
+                    "example": "12345"
+                },
+                {
+                    "type": "string",
+                    "description": "Mobile Number",
+                    "name": "mobileNumber",
+                    "in": "formData",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Licence Number",
+                    "name": "licenceNumber",
+                    "in": "formData",
+                    "example": "example@example.com"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "successfully signed up."
+                }
+            }
+        }
+    },
+    "/driver/login": {
+        "get": {
+            "description": "Login for Driver",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Email",
+                    "name": "email",
+                    "in": "query",
+                    "example": "example@example.com"
+                },
+                {
+                    "type": "string",
+                    "description": "Password",
+                    "name": "password",
+                    "in": "query",
+                    "example": "12345"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "successfully Logged In."
+                }
+            }
+        }
+    },
+    "/admin/drivers": {
+        "get": {
+            "description": "View Drivers by Admin",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Token",
+                    "name": "token",
+                    "in": "query",
+                    "example": "example@exa@@$##@@#m"
+                },
+                {
+                    "type": "string",
+                    "description": "Driver Status(1/2)",
+                    "name": "status",
+                    "in": "query",
+                    "example": "12345"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Booking completed Success."
+                }
+            }
+        }
+    },
+    "/admin/viewBookings": {
+        "get": {
+            "description": "View Drivers by Admin",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Token",
+                    "name": "token",
+                    "in": "query",
+                    "example": "example@exa@@$##@@#m"
+                }
+                
+            ],
+            "responses": {
+                "200": {
+                    "description": "Booking completed Success."
+                }
+            }
+        }
+    },
+    "/admin/assignDriver": {
+        "post": {
+            "description": "Admin will assign driver",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Token",
+                    "name": "token",
+                    "in": "formData",
+                    "example": "#2$64vdfefe#43"
+                },
+                {
+                    "type": "string",
+                    "description": "Booking Id",
+                    "name": "bookingId",
+                    "in": "formData",
+                    "example": "10"
+                },
+                {
+                    "type": "string",
+                    "description": "Driver Id",
+                    "name": "driverId",
+                    "in": "formData",
+                    "example": "21"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Driver successfully Assigned"
+                }
+            }
+        }
+    },
+    "/driver/completeBooking": {
+        "post": {
+            "description": "Complete booking by Driver",
+            "parameters": [
+                {
+                    "type": "string",
+                    "description": "Token",
+                    "name": "token",
+                    "in": "formData",
+                    "example": "example@exa@@$##@@#m"
+                },
+                {
+                    "type": "string",
+                    "description": "Booking Id",
+                    "name": "bookingId",
+                    "in": "formData",
+                    "example": "12345"
+                }
+            ],
+            "responses": {
+                "200": {
+                    "description": "Booking completed Success."
+                }
+            }
+        }
+    }
+}
+}

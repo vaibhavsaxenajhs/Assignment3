@@ -1,0 +1,17 @@
+{
+  "name": "mycab",
+  "version": "1.0.0",
+  "description": "dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.4",
+    "bluebird": "^3.5.3",
+    "dateformat": "^3.0.3",
+    "jsonwebtoken": "^8.5.0"
+  }
+}
